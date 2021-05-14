@@ -43,6 +43,12 @@ int main()
 		cout << "Result = " + getDayOfWeek(num1) << endl;
 		num1++;
 	}
+	
+	int arr[] = { 1,2,3,4,5,6 };
+
+	for (int i = 0; i < 7; i++) {
+		cout << "Result = " + getDayOfWeek(i) << endl;
+	}
 
 	return 0;
 }
