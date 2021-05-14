@@ -13,6 +13,21 @@ string getDayOfWeek(int dayNum) {
 	case 1:
 		return "Monday";
 		break;
+	case 2:
+		return "Tuesday";
+		break;
+	case 3:
+		return "Wednesday";
+		break;
+	case 4:
+		return "Thursday";
+		break;
+	case 5:
+		return "Friday";
+		break;
+	case 6:
+		return "Saturday";
+		break;
 	default:
 		return "Invalid";
 	}
@@ -24,7 +39,10 @@ int main()
 	cout << "Please insert num1:" << endl;
 	cin >> num1;
 
-	cout << "Result = " + getDayOfWeek(num1);
+	while (num1 < 10) {
+		cout << "Result = " + getDayOfWeek(num1) << endl;
+		num1++;
+	}
 
 	return 0;
 }
