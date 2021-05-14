@@ -4,40 +4,27 @@
 
 using namespace std;
 
-int operation(int num1, int num2, char op) {
-	if (op == '+') {
-		return num1 + num2;
-	}
-	else if(op == '-') {
-		return num1 - num2;
-	}
-	else if (op == '*') {
-		return num1 * num2;
-	}
-	else if (op == '/') {
-		return num1 / num2;
-	}
-	else {
-		return -1;
+string getDayOfWeek(int dayNum) {
+	
+	switch (dayNum) {
+	case 0:
+		return "Sunday";
+		break;
+	case 1:
+		return "Monday";
+		break;
+	default:
+		return "Invalid";
 	}
 }
 
 int main()
 {
 	int num1;
-	int num2;
-	char op;
-
 	cout << "Please insert num1:" << endl;
 	cin >> num1;
 
-	cout << "Please insert operator:" << endl;
-	cin >> op;
-
-	cout << "Please insert num2:" << endl;
-	cin >> num2;
-
-	cout << "Result = " + to_string(operation(num1, num2, op));
+	cout << "Result = " + getDayOfWeek(num1);
 
 	return 0;
 }
