@@ -35,18 +35,21 @@ string getDayOfWeek(int dayNum) {
 
 int main()
 {
-	int num1;
-	cout << "Please insert num1:" << endl;
-	cin >> num1;
+	//int num1;
+	//cout << "Please insert num1:" << endl;
+	//cin >> num1;
 
-	while (num1 < 10) {
-		cout << "Result = " + getDayOfWeek(num1) << endl;
-		num1++;
-	}
+	//while (num1 < 10) {
+	//	cout << "Result = " + getDayOfWeek(num1) << endl;
+	//	num1++;
+	//}
 	
 	int arr[] = { 1,2,3,4,5,6 };
-
-	for (int i = 0; i < 7; i++) {
+	cout << sizeof(arr) << endl;
+	cout << sizeof(arr[0]) << endl;
+	cout << sizeof(arr) / sizeof(arr[0]) << endl;
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+		cout << arr[i] << endl;
 		cout << "Result = " + getDayOfWeek(i) << endl;
 	}
 
