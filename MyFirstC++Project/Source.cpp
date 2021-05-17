@@ -4,39 +4,42 @@
 
 using namespace std;
 
-class Book {
+class Student {
 public:
-	string title;
-	string author;
-	int pages;
+	string name;
+	string major;
+	double gpa;
 
-	Book() {
-		title = "no title";
-		author = "no auther";
-		pages = 0;
-		cout << "Creating Object... null" << endl;
+	Student() {
+		name = "null";
+		major = "null";
+		gpa = 0.0;
+		cout << "Creating Object... " + name << endl;
 	}
 
-	Book(string title, string author, int pages) {
-		this->title = title;
-		this->author = author;
-		this->pages = pages;
-		cout << "Creating Object... " + title << endl;
+	Student(string name, string major, double gpa) {
+		this->name = name;
+		this->major = major;
+		this->gpa = gpa;
+		cout << "Creating Object... " + name << endl;
+	}
+
+	bool hasHonours() {
+		if (gpa >= 3.5) {
+			return true;
+		}
+		return false;
 	}
 };
 
 
 int main()
 {
-	Book book1("Harry Potter", "A", 1);
-	Book book2("LOTR", "B", 2);
-	Book book3("News", "C", 3);
-	Book book4;
+	Student student1("Jim", "Business", 2.4);
+	Student student2("Pam", "Art", 3.6);
 
-	cout << "Book1: " << book1.title << endl;
-	cout << "Book2: " << book2.title << endl;
-	cout << "Book3: " << book3.title << endl;
-	cout << "Book4: " << book4.title << endl;
+	cout << "student1: " << student1.hasHonours() << endl;
+	cout << "student2: " << student2.hasHonours() << endl;
 
 	return 0;
 }
