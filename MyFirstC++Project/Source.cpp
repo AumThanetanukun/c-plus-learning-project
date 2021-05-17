@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Super Class
 class Chef {
 public:
 	void makeChicken() {
@@ -17,6 +18,7 @@ public:
 	}
 };
 
+// Sub class
 class ItalianChef : public Chef {
 public:
 	void makePasta() {
