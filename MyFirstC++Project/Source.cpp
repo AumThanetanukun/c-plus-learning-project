@@ -4,42 +4,42 @@
 
 using namespace std;
 
-class Student {
-public:
-	string name;
-	string major;
-	double gpa;
+class Movie {
+private:
+	string rating;
 
-	Student() {
-		name = "null";
-		major = "null";
-		gpa = 0.0;
-		cout << "Creating Object... " + name << endl;
-	}
-
-	Student(string name, string major, double gpa) {
-		this->name = name;
-		this->major = major;
-		this->gpa = gpa;
-		cout << "Creating Object... " + name << endl;
-	}
-
-	bool hasHonours() {
-		if (gpa >= 3.5) {
-			return true;
+	void setRating(string rating) {
+		if (rating == "G" || rating == "PG" || rating == "PG-13" || rating == "R" || rating == "NR") {
+			this->rating = rating;
 		}
-		return false;
+		else {
+			cout << "Rating input error for " + title + " => " + rating << endl;
+			this->rating = "NR"; // Not Rated
+		}
+	}
+
+public:
+	string title;
+	string director;
+
+	Movie(string title, string director, string rating) {
+		this->title = title;
+		this->director = director;
+		setRating(rating);
+	}
+	string getRating() {
+		return rating;
 	}
 };
 
 
 int main()
 {
-	Student student1("Jim", "Business", 2.4);
-	Student student2("Pam", "Art", 3.6);
+	Movie avengers("The Avengers", "Joss Whedon", "PG-13");
+	Movie ghost("The Ghost", "Unknown", "Dog");
 
-	cout << "student1: " << student1.hasHonours() << endl;
-	cout << "student2: " << student2.hasHonours() << endl;
+	cout << "movie1: " << avengers.getRating() << endl;
+	cout << "movie2: " << ghost.getRating() << endl;
 
 	return 0;
 }
