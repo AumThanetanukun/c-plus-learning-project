@@ -4,31 +4,28 @@
 
 using namespace std;
 
+class Book {
+public:
+	string title;
+	string author;
+	int pages;
+};
+
+
 int main()
 {
-	int age = 26;
-	int *pAge = &age;
-	double gpa = 2.7;
-	double *pGpa = &gpa;
-	string name = "Aum";
-	string* pName = &name;
+	Book book1;
+	book1.title = "Harry Potter";
+	book1.author = "JK Rowling";
+	book1.pages = 500;
 
-	// Pointer or Memory Address
-	cout << "Age :" << &age << endl;
-	cout << "GPA :" << &gpa << endl;
-	cout << "Name :" << &name << endl;
+	Book book2;
+	book2.title = "LOTR";
+	book2.author = "Unkown";
+	book2.pages = 700;
 
-	cout << "Age (Pointer Variable) :" << pAge << endl;
-	cout << "GPA (Pointer Variable) :" << pGpa << endl;
-	cout << "Name (Pointer Variable) :" << pName << endl;
-
-	cout << "Age (Value from Pointer) :" << *pAge << endl;
-	cout << "GPA (Value from Pointer) :" << *pGpa << endl;
-	cout << "Name (Value from Pointer) :" << *pName << endl;
-
-	cout << "Age (*&) :" << *&*&age << endl;
-	cout << "GPA (*&) :" << *&*&gpa << endl;
-	cout << "Name (*&) :" << *&*&name << endl;
+	cout << book1.title << endl;
+	cout << book2.title << endl;
 
 	return 0;
 }
